@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap'); 
+
+/* Importação das fontes utilizadas na página pelo Google Fontes*/
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat' , sans-serif;
+}
+
+* { /* Todo conteúdo */
+    margin: 0; /* Retirando a margem dos conteúdos para o fletbox */
+    padding: 0; /* Retirando o preenchimento dos conteúdos para o fletbox */
+}
+
+body { /* Página */
+    /*height: 100vh; */ /* Preenchimento da página */
+    box-sizing: border-box; /* Fazendo com que todo conteudo da página fique dentro do quadrado criado para a página */
+    background-color: var(--cor-primaria); /* Cor do fundo da página */
+    color: var(--cor-secundaria); /* Cor da fonte */
+}
+
+.titulo-destaque { /* Parte destaque (stronge) do título */
+    color: var(--cor-terciaria); /* Cor do destaque */
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 10%;
+}
+
+.cabecalho_menu {
+    display: flex;
+    gap: 50px
+}
+
+.cabecalho_menu_link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.apresentacao { /* Corpo da página <main> */
+    padding: 5% 10%; /* Tamanho da margem do corpo */
+    display: flex; /* Fletbox */
+    align-items: center; /* Alinhamento do texto com imagem no centro */
+    justify-content: space-between; /* Alinhamento do texto com a imagem com distancia entre eles */
+    gap: 82px;
+    
+}
+
+.apresentacao_conteudo { /* Section para ficar alinhado com a imagem */
+    width: 50%; /* Largura da Section*/
+    display: flex; /* Fletbox */
+    flex-direction: column; /* Alinhamento em coluna */
+    gap: 40px; /* Distância entre os conteúdos na vertical */
+}
+
+.apresentacao_conteudo_titulo { /* Título <h1> */
+    font-size: 2.25rem; /* Tamanho fonte (rem para acompanhar o tamanho da fonte desejado pelo usuário) */
+    font-family: var(--fonte-primaria); /* Fonte do texto */
+}
+
+.apresentacao_conteudo_texto { /* Parágrafo <p> */
+    font-size: 1.5rem; /* Tamanho fonte */
+    font-family: var(--fonte-secundaria); /* Fonte do texto */
+}
+
+.redes-sociais { /* Link e seu fundo */
+    display: flex; /* Fletbox */
+    flex-direction: column; /* alinhar botoes em coluna */
+    align-items: center; /* alinhar botoes no centro */
+    justify-content: space-between; /* Alinhar com espaço entre eles */
+    gap: 32px;
+}
+
+.redes-sociais_texto { /* acesse minhas  redes */
+    font-family: var(--fonte-primaria); /* fonte */
+    font-size: 1.5rem; /* tamanho fonte */
+    font-weight: 40;
+    text-align: center; /* alinhar o texto ao centro */
+}
+
+.redes-sociais_link { /* Links */
+    /*background-color: black; */  /* Cor do fundo do link */
+    display: flex; /* flexbo */
+    justify-content: center; /* alinhar filhos no centro */
+    gap: 16px; /* distancia entre img e text */
+    align-items: center;
+    border: 2px solid var(--cor-terciaria); /* borda do link */
+    border-radius: 60px;
+    width: 50%; /* Largura do fundo dos links */
+    border-radius: 8px; /* Arredondamento das bordas do fundo do link */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    font-weight: 600; /* Largura da fonte */
+    padding: 21.5px 0; /* Preenchimento do fundo do link na vertical e horizontal */
+    text-decoration: none; /* Retirar sublinhado da fonte */
+    color: #F6F6F6; /* Cor da fonte */
+    font-family: var(--fonte-secundaria); /* Fonte dos links */
+}
+
+.redes-sociais_link:hover { /* animacao botoes */
+    background-color: var(--cor-hover);
+}
+
+.imagem_apresentacao {
+    width: 50%; /* fazer imagem acompanhar tamanho da página */
+}
+
+.rodape {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    color:var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+}
+
+@media (max-width: 1200px) {
+
+    .cabecalho {
+        padding: 8%; /* espaço da parte de cima do cabeçalho */
+    }
+
+    .cabecalho_menu {
+        justify-content: center; /* alinhar cabeçalho ao centro */
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse; /* fazer com que a imagem fique em cima */
+        padding: 5%; /* */
+    }
+
+    .apresentacao_conteudo {
+        width: auto; /* ajustar larguta automaticamente */
+    }
+}
